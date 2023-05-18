@@ -13,5 +13,7 @@ wit-bindgen = { version = "0.4.0", default_features = false }
 [workspace]
 members = [
     "crates/cargo-component-hello",
-    "crates/wit-bindgen-hello"
+    "crates/wit-bindgen-hello",
+    "bindings/cargo-component-hello",
+    "bindings/experimental-component-model",
 ]
