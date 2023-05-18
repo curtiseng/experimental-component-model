@@ -1,14 +1,12 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+use wit_bindgen::generate;
+generate!("host");
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+struct MyHost;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+impl Host for MyHost {
+    fn run() {
+        println!("hello world");
     }
 }
+
+export_host!(MyHost);
